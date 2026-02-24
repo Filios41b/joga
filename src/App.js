@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/zarezerwuj" element={<Zarezerwuj />} />
+        <Route path="/zapisy" element={<Zarezerwuj />} />
       </Routes>
     </Router>
   );

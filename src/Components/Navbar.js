@@ -5,7 +5,7 @@ function Navbar() {
     <nav className="navbar-adjust navbar navbar-expand-lg">
       <div className="container d-flex navbar-custom">
         <Link className="nav-link text-white me-5" to="/">Strona Główna</Link>
-        <Link className="nav-link text-white me-5" to="/zarezerwuj">Zapisz się</Link>
+        <Link className="nav-link text-white me-5" to="/zapisy">Zapisz się</Link>
       </div>
     </nav>
   );
