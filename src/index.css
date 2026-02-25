@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif !important;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(45deg, #0c140e 0%, #214724 100%);
+  background-attachment: fixed;
+  color: white;
 }
 
 code {
@@ -15,22 +19,12 @@ html, body, #root {
   height: 100%;
 }
 
-body {
-  background: linear-gradient(
-    45deg,
-    #0c140e 0%,
-    #214724 100%
-  );
-  background-attachment: fixed;
-}
-
 h1 {
   font-size: 50px !important;
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 1);
 }
 
 /*Navbar.js*/
-/*Navbar*/
 .navbar-custom {
   justify-content: start !important;
   font-size: 20px;
@@ -60,7 +54,6 @@ h1 {
 }
 
 /*Zarezerwuj.js*/
-/*Zapisy iframe*/
 .zarezerwuj-iframe {
   border: none;
   min-height: 650px;
@@ -86,9 +79,6 @@ h1 {
 }
 
 /*Main.js*/
-/* Strona główna */
-
-/*Joga funcjonalna*/
 @media (max-width: 767px) {
   .joga {
     font-size: 40px !important;
@@ -159,7 +149,6 @@ h1 {
 }
 
 /*Cennik.js*/
-/*Tabela*/
 .table {
   background-color: rgba(0,0,0,0.2);
   padding: 20px 30px;
@@ -169,7 +158,6 @@ h1 {
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
-/* Wiersze */
 .table-custom tbody tr td{
   background-color: rgba(0,0,0,0.2);
   padding: 20px 30px;
@@ -180,11 +168,71 @@ h1 {
   color: white;
 }
 
-/* Nagłówek */
 .table-custom thead th {
   background-color: rgba(0,0,0,0.2);
   border-radius: 15px;
   max-width: 800px;
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
   color: white;
+}
+
+/*Footer.js*/
+.page-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+/*BackToTop.js*/
+.back-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  z-index: 999;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+
+  background: #596554;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*Dodane*/
+/* Animacje fade + slide dla sekcji */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.zarezerwuj-iframe {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* Tabela animuje się jako całość */
+.table.table-custom {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsywność dodatkowa */
+@media (max-width: 768px) {
+  h1 { font-size: 36px !important; }
+  .container { padding: 0 20px; }
+  .nav-link { padding: 15px 0; font-size: 18px; }
 }

@@ -1,8 +1,10 @@
 import React from 'react';
+import AnimatedSection from "./AnimatedSection";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Cennik() {
     return (
+      <AnimatedSection>
         <div className="container mt-5 text-white">
             <h1>Cennik</h1>
             <div className='spacer50'></div>
@@ -29,6 +31,8 @@ function Cennik() {
                 </tbody>
             </table>
         </div>
+      </AnimatedSection>
     );
 }
+
 export default Cennik;
