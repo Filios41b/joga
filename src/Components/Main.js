@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Main() {
   return (
     <div className="container mt-5 text-white main-page">
-      <h1 className='joga-page text-center mb-4'>JOGA FUNKCJONALNA</h1>
+      <h1 className='joga text-center mb-4'>JOGA FUNKCJONALNA</h1>
 
       <p className='yoga-page lead-page'>
         Zajęcia łączące elementy treningu funkcjonalnego, pilatesu oraz łagodnej jogi, dzięki czemu są odpowiednie zarówno dla osób aktywnych, jak i wracających do ruchu po przerwie. To spokojny trening, który buduje siłę od środka, poprawia mobilność i wspiera regenerację.
