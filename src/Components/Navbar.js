@@ -43,6 +43,11 @@ function Navbar() {
                 Kontakt
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/cennik">
+                Cennik
+              </Link>
+            </li>
           </ul>
         </div>
 

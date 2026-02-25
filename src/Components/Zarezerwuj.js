@@ -5,7 +5,7 @@ function Zarezerwuj() {
       <div className="spacer50"></div>
       <iframe
         src="https://widget.zarezerwuj.pl/6609e190-2978-4240-9883-9757ad380163"
-        style={{ border: "none", minHeight: "650px", width: "100%", height: "100%" }}
+        className="zarezerwuj-iframe"
         seamless
         title="Zapisz się"
       ></iframe>

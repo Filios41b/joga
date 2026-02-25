@@ -25,4 +25,4 @@ function Kontakt() {
         </div>
     );
 }
-export default Kontakt
+export default Kontakt;

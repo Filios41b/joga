@@ -6,6 +6,7 @@ import Main from "./Components/Main";
 import Zarezerwuj from "./Components/Zarezerwuj";
 import BackToTop from "./Components/BackToTop";
 import Kontakt from "./Components/Kontakt";
+import Cennik from "./Components/Cennik";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/zapisy" element={<Zarezerwuj />} />
         <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/cennik" element={<Cennik />} />
       </Routes>
       <BackToTop />
     </Router>
