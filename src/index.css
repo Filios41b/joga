@@ -24,22 +24,37 @@ body {
   background-attachment: fixed;
 }
 
-.h1-custom {
-  color: #b7bbb2 !important;
-}
-
-.img-custom{
-  width: 25%;
-  height: fit-content;
+h1 {
+  font-size: 50px !important;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 1);
 }
 
 .navbar-custom {
   justify-content: start !important;
-  height: fit-content;
   font-size: 20px;
+  height: 3em;
 }
 
-.navbar-adjust{
+.navbar-adjust {
   background-color: rgba(255, 255, 255, 0.1) !important;
   text-shadow: 5px 6px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 33px -1px rgba(0, 0, 0, 0.5);
+}
+
+iframe {
+  box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 1);
+}
+
+.spacer50 {
+  margin: 50px;
+}
+
+.icon {
+  margin-right: 10px;
+  color: white;
+  float: left;
+}
+
+.yoga {
+  width: fit-content;
 }
