@@ -9,7 +9,6 @@ import Main from "./Components/Main";
 import Zarezerwuj from "./Components/Zarezerwuj";
 import Kontakt from "./Components/Kontakt";
 import Cennik from "./Components/Cennik";
-import Footer from "./Components/Footer";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -34,7 +33,6 @@ function App() {
         <main className="content">
           <AnimatedRoutes />
         </main>
-        <Footer />
       </div>
     </Router>
   );
