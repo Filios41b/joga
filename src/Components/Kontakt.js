@@ -13,16 +13,16 @@ function Kontakt() {
           <h2><b>Agnieszka Chołdrych</b></h2>
         </div>
         <div>
-          <a className='icon' href='mailto:test@test.com'>
+          <a className='icon' href='mailto:agnieszkacholdrych@gmail.com'>
             <FaEnvelope/>
           </a>
-          <p>test@test.com</p>
+          <p>agnieszkacholdrych@gmail.com</p>
         </div>
         <div> 
-          <a className="icon" href='tel:000000000'>
+          <a className="icon" href='tel:691366649'>
             <FaPhone />
           </a>
-          <p>(+48) 000 000 000</p>
+          <p>(+48) 691 366 649</p>
         </div>
       </div>
     </AnimatedSection>
