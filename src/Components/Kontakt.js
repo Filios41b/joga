@@ -13,10 +13,10 @@ function Kontakt() {
           <h2><b>Agnieszka Chołdrych</b></h2>
         </div>
         <div>
-          <a className='icon' href='mailto:agnieszkacholdrych@gmail.com'>
+          <a className='icon' href='mailto:jogafunkcjonalna@gmail.com'>
             <FaEnvelope/>
           </a>
-          <p>agnieszkacholdrych@gmail.com</p>
+          <p>jogafunkcjonalna@gmail.com</p>
         </div>
         <div> 
           <a className="icon" href='tel:691366649'>
