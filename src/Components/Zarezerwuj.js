@@ -9,7 +9,7 @@ function Zarezerwuj() {
         <h1>Zapisz się</h1>
         <div className="spacer50"></div>
         <iframe
-          src="https://widget.zarezerwuj.pl/6609e190-2978-4240-9883-9757ad380163"
+          src="https://widget.zarezerwuj.pl/8aaf7279-d097-4978-9fc7-b5f4a0260f2e"
           className="zarezerwuj-iframe"
           seamless
           title="Zapisz się"

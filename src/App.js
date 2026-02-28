@@ -9,6 +9,7 @@ import Main from "./Components/Main";
 import Zarezerwuj from "./Components/Zarezerwuj";
 import Kontakt from "./Components/Kontakt";
 import Cennik from "./Components/Cennik";
+import Zdjecia from "./Components/Zdjecia";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function AnimatedRoutes() {
         <Route path="/zapisy" element={<Zarezerwuj />} />
         <Route path="/cennik" element={<Cennik />} />
         <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/galeria" element={<Zdjecia />} />
       </Routes>
     </AnimatePresence>
   );

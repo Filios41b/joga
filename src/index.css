@@ -236,3 +236,15 @@ h1 {
   .container { padding: 0 20px; }
   .nav-link { padding: 15px 0; font-size: 18px; }
 }
+
+/*Zdjecia.js*/
+.photo img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-container {
+  min-height: 100vh;
+}
+
