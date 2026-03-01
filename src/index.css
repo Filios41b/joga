@@ -63,6 +63,22 @@ h1 {
   box-shadow: 0 0 25px rgba(0,0,0,1);
 }
 
+@media (max-width: 768px) {
+
+  .zarezerwuj-iframe {
+    width: 100%;
+    border-radius: 12px;
+    min-height: 80vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  }
+
+  /* give breathing room on sides */
+  .zarezerwuj-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
 /*Addons*/
 .spacer50 {
   margin: 50px;
@@ -176,6 +192,7 @@ h1 {
   color: white;
 }
 
+
 /*Footer.js*/
 .page-container {
   height: 100vh;
@@ -238,13 +255,112 @@ h1 {
 }
 
 /*Zdjecia.js*/
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 220px;
+  gap: 20px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.photo:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 35px rgba(255,255,255,0.7);
+  border-radius: 12px;
+}
+
 .photo img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 12px;
+}
+
+.photo.vertical {
+  grid-row: span 2;
 }
 
 .gallery-container {
   min-height: 100vh;
 }
 
+
+/*Fullscreen*/
+/* Fullscreen overlay */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Fullscreen image */
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(255,255,255,0.3);
+}
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* =========================
+   MOBILE RESPONSIVE STYLES
+   ========================= */
+@media (max-width: 768px) {
+
+  /* One column layout */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  /* Disable row spanning on mobile */
+  .photo.vertical {
+    grid-row: span 1;
+  }
+
+  /* Reduce shadows for performance */
+  .photo {
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  }
+
+  /* Disable hover scale on touch devices */
+  .photo:hover {
+    transform: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  }
+
+  /* Fullscreen image sizing */
+  .lightbox img {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+
+  /* Bigger close button for thumbs */
+  .lightbox-close {
+    top: 15px;
+    right: 20px;
+    font-size: 34px;
+  }
+}

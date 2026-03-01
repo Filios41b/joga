@@ -49,6 +49,11 @@ function Navbar() {
                   Kontakt
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/galeria" onClick={closeMenu}>
+                  Galeria
+                </Link>
+              </li>
 
             </ul>
           </div>

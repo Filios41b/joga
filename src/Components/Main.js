@@ -1,8 +1,29 @@
+// ./Components/Main.js
 import React from 'react';
 import AnimatedSection from "./AnimatedSection";
+import { motion } from "framer-motion";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+const listVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15 }
+  }
+};
+
+const listItemVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0 }
+};
+
 function Main() {
+  const benefits = [
+    "Poprawisz zakres ruchu i elastyczność tkanek",
+    "Wzmocnisz mięśnie głębokie odpowiedzialne za stabilizację",
+    "Nauczysz się kontrolować postawę i pracę ciała w bezpiecznych wzorcach ruchowych",
+    "Zmniejszysz napięcia i przeciążenia powstałe w wyniku siedzącego trybu życia lub intensywnych treningów"
+  ];
+
   return (
     <AnimatedSection>
       <div className="container mt-5 text-white main-page">
@@ -16,15 +37,21 @@ function Main() {
           Kompleksowe zajęcia wspierają sprawność całego ciała poprzez świadomy ruch i pracę z oddechem.
         </p>
 
-        <div className='training-benefits-page mt-4'>
+        <motion.div
+          className='training-benefits-page mt-4'
+          initial="hidden"
+          animate="visible"
+          variants={listVariants}
+        >
           <h3 className='training-title-page'>Podczas treningu:</h3>
-          <ul className='training-list-page'>
-            <li>Poprawisz zakres ruchu i elastyczność tkanek</li>
-            <li>Wzmocnisz mięśnie głębokie odpowiedzialne za stabilizację</li>
-            <li>Nauczysz się kontrolować postawę i pracę ciała w bezpiecznych wzorcach ruchowych</li>
-            <li>Zmniejszysz napięcia i przeciążenia powstałe w wyniku siedzącego trybu życia lub intensywnych treningów</li>
-          </ul>
-        </div>
+          <motion.ul className='training-list-page'>
+            {benefits.map((item, index) => (
+              <motion.li key={index} variants={listItemVariants}>
+                {item}
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
       </div>
     </AnimatedSection>
   );
