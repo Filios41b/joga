@@ -20,8 +20,8 @@ function AnimatedRoutes() {
         <Route path="/" element={<Main />} />
         <Route path="/zapisy" element={<Zarezerwuj />} />
         <Route path="/cennik" element={<Cennik />} />
-        <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/galeria" element={<Zdjecia />} />
+        <Route path="/kontakt" element={<Kontakt />} />
       </Routes>
     </AnimatePresence>
   );
