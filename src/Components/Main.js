@@ -34,7 +34,7 @@ function Main() {
         </p>
 
         <p className='yoga-page-lead mt-4'>
-          Kompleksowe zajęcia wspierają sprawność całego ciała poprzez świadomy ruch i pracę z oddechem.
+          Kompleksowe zajęcia wspierające sprawność całego ciała poprzez świadomy ruch i pracę z oddechem.
         </p>
 
         <motion.div
