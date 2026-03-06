@@ -10,6 +10,7 @@ import Zarezerwuj from "./Components/Zarezerwuj";
 import Kontakt from "./Components/Kontakt";
 import Cennik from "./Components/Cennik";
 import Zdjecia from "./Components/Zdjecia";
+import BackToTop from "./Components/BackToTop";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
         <main className="content">
           <AnimatedRoutes />
         </main>
+        <BackToTop />
       </div>
     </Router>
   );

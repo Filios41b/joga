@@ -1,3 +1,6 @@
+/*
+* * ----- global.css -----
+*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 body {
@@ -24,7 +27,15 @@ h1 {
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 1);
 }
 
-/*Navbar.js*/
+@media (max-width: 768px) {
+  h1 { font-size: 36px !important; }
+  .container { padding: 0 20px; }
+  .nav-link { padding: 15px 0; font-size: 18px; }
+}
+
+/*
+* * ----- Navbar.js -----
+*/
 .navbar-custom {
   justify-content: start !important;
   font-size: 20px;
@@ -35,6 +46,15 @@ h1 {
   background-color: rgba(255, 255, 255, 0.1) !important;
   text-shadow: 5px 6px 5px rgba(0, 0, 0, 1);
   box-shadow: 0px 0px 33px -1px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
 }
 
 @media (max-width: 1000px) {
@@ -53,56 +73,10 @@ h1 {
   }
 }
 
-/*Zarezerwuj.js*/
-.zarezerwuj-iframe {
-  border: none;
-  min-height: 650px;
-  width: 100%;
-  height: 100%;
-  border-radius: 2%;
-  box-shadow: 0 0 25px rgba(0,0,0,1);
-}
-
-@media (max-width: 768px) {
-
-  .zarezerwuj-iframe {
-    width: 100%;
-    border-radius: 12px;
-    min-height: 80vh;
-    box-shadow: 0 0 15px rgba(0,0,0,0.6);
-  }
-
-  /* give breathing room on sides */
-  .zarezerwuj-container {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
-
-/*Addons*/
-.spacer50 {
-  margin: 50px;
-}
-
-.icon {
-  margin-right: 10px;
-  color: white;
-  float: left;
-}
-
-.yoga {
-  width: fit-content;
-}
-
-/*Main.js*/
-@media (max-width: 767px) {
-  .joga {
-    font-size: 40px !important;
-    padding: 0 0 2rem 0 !important;
-  }
-}
-
-.yoga-page-lead{
+/*
+* * ----- Main.js -----
+*/
+.yoga-page-lead {
   background-color: rgba(89, 101, 83, 1);
   border-radius: 15px;
   padding: 20px 30px;
@@ -117,6 +91,11 @@ h1 {
 @media (max-width: 767px) {
   .main-page .joga {
     font-size: 40px;
+  }
+
+  .joga {
+    font-size: 40px !important;
+    padding: 0 0 2rem 0 !important;
   }
 }
 
@@ -164,7 +143,36 @@ h1 {
   margin-bottom: 1.5rem !important;
 }
 
-/*Cennik.js*/
+/*
+* * ----- Zarezerwuj.js -----
+*/
+.zarezerwuj-iframe {
+  border: none;
+  min-height: 650px;
+  width: 100%;
+  height: 100%;
+  border-radius: 2%;
+  box-shadow: 0 0 25px rgba(0,0,0,1);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@media (max-width: 768px) {
+  .zarezerwuj-iframe {
+    width: 100%;
+    border-radius: 12px;
+    min-height: 80vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  }
+
+  .zarezerwuj-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/*
+* * ----- Cennik.js -----
+*/
 .table {
   background-color: rgba(0,0,0,0.2);
   padding: 20px 30px;
@@ -174,7 +182,7 @@ h1 {
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
-.table-custom tbody tr td{
+.table-custom tbody tr td {
   background-color: rgba(0,0,0,0.2);
   padding: 20px 30px;
   border-radius: 15px;
@@ -192,69 +200,22 @@ h1 {
   color: white;
 }
 
-
-/*Footer.js*/
-.page-container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+/*
+* * ----- Kontakt.js -----
+*/
+.spacer50 {
+  margin: 50px;
 }
 
-.content {
-  flex-grow: 1;
+.icon {
+  margin-right: 10px;
+  color: white;
+  float: left;
 }
 
-/*BackToTop.js*/
-.back-to-top {
-  position: fixed;
-  bottom: 80px;
-  right: 30px;
-  z-index: 999;
-
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: none;
-
-  background: #596554;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/*Dodane*/
-/* Animacje fade + slide dla sekcji */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.zarezerwuj-iframe {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.nav-link {
-  transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-  transform: translateY(-2px);
-  text-shadow: 0 0 10px rgba(255,255,255,0.6);
-}
-
-/* Tabela animuje się jako całość */
-.table.table-custom {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-/* Responsywność dodatkowa */
-@media (max-width: 768px) {
-  h1 { font-size: 36px !important; }
-  .container { padding: 0 20px; }
-  .nav-link { padding: 15px 0; font-size: 18px; }
-}
-
-/*Zdjecia.js*/
+/*
+* * ----- Zdjecia.js -----
+*/
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -268,7 +229,7 @@ h1 {
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
-.photo:hover{
+.photo:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
   box-shadow: 0 0 35px rgba(255,255,255,0.7);
@@ -291,8 +252,6 @@ h1 {
   min-height: 100vh;
 }
 
-
-/*Fullscreen*/
 /* Fullscreen overlay */
 .lightbox {
   position: fixed;
@@ -304,7 +263,6 @@ h1 {
   z-index: 9999;
 }
 
-/* Fullscreen image */
 .lightbox img {
   max-width: 90vw;
   max-height: 90vh;
@@ -313,7 +271,6 @@ h1 {
   box-shadow: 0 0 40px rgba(255,255,255,0.3);
 }
 
-/* Close button */
 .lightbox-close {
   position: absolute;
   top: 30px;
@@ -324,43 +281,64 @@ h1 {
   user-select: none;
 }
 
-/* =========================
-   MOBILE RESPONSIVE STYLES
-   ========================= */
+/* Mobile */
 @media (max-width: 768px) {
-
-  /* One column layout */
   .gallery-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
   }
 
-  /* Disable row spanning on mobile */
   .photo.vertical {
     grid-row: span 1;
   }
 
-  /* Reduce shadows for performance */
   .photo {
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
   }
 
-  /* Disable hover scale on touch devices */
   .photo:hover {
     transform: none;
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
   }
 
-  /* Fullscreen image sizing */
   .lightbox img {
     max-width: 95vw;
     max-height: 80vh;
   }
 
-  /* Bigger close button for thumbs */
   .lightbox-close {
     top: 15px;
     right: 20px;
     font-size: 34px;
   }
+}
+
+/*
+* * ----- BackToTop.js -----
+*/
+.back-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  z-index: 999;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #596554;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*
+* * ----- AnimatedSection / AnimatedSectionPhotos -----
+*/
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.table.table-custom {
+  animation: fadeInUp 0.8s ease-out;
 }
