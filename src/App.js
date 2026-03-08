@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { HelmetProvider } from "react-helmet-async";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -11,6 +12,7 @@ import Kontakt from "./Components/Kontakt";
 import Cennik from "./Components/Cennik";
 import Zdjecia from "./Components/Zdjecia";
 import BackToTop from "./Components/BackToTop";
+import SEO from "./Components/SEO";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -30,15 +32,18 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <Router>
-      <div className="page-container">
-        <Navbar />
-        <main className="content">
-          <AnimatedRoutes />
-        </main>
-        <BackToTop />
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <div className="page-container">
+          <Navbar />
+          <main className="content">
+            <SEO />
+            <AnimatedRoutes />
+          </main>
+          <BackToTop />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
