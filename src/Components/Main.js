@@ -44,7 +44,7 @@ function Main() {
           <motion.ul className='training-list-page'>
             {benefits.map((item, index) => (
               <motion.li key={index} variants={listItemVariants}>
-                <h3>{item}</h3>
+                {item}
               </motion.li>
             ))}
           </motion.ul>
