@@ -1,35 +1,34 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function BackToTop() {
-  const [visible, setVisible] = useState(false);
+const BackToTop = () => {
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      setVisible(window.scrollY > 100);
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    const handleScroll = () => setShow(window.scrollY > 300);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <AnimatePresence>
-      {visible && (
+      {show && (
         <motion.button
           className="back-to-top"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          initial={{ opacity: 0, y: 20 }}
+          onClick={scrollToTop}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          whileHover={{ scale: 1.2 }}
+          exit={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.6 }}
+          whileHover={{ scale: 1.15, backgroundColor: "#718662" }}
         >
           ↑
         </motion.button>
       )}
     </AnimatePresence>
   );
-}
+};
 
 export default BackToTop;

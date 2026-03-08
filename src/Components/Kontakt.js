@@ -1,7 +1,7 @@
 import React from 'react';
 import AnimatedSection from "./AnimatedSection";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaPhone} from "react-icons/fa";
 
 function Kontakt() {
   return (
@@ -9,15 +9,20 @@ function Kontakt() {
       <div className="container mt-5 text-white">
         <h1>Kontakt</h1>
         <div className='spacer50'></div>
+
         <div>
           <h2><b>Agnieszka Chołdrych</b></h2>
         </div>
+
+        {/* Email */}
         <div>
           <a className='icon' href='mailto:jogafunkcjonalna@gmail.com'>
             <FaEnvelope/>
           </a>
           <p>jogafunkcjonalna@gmail.com</p>
         </div>
+
+        {/* Telefon */}
         <div> 
           <a className="icon" href='tel:691366649'>
             <FaPhone />

@@ -5,7 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const containerVariants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } }
+  visible: {
+    transition: { staggerChildren: 0.1 }
+  }
 };
 
 const photoVariants = {
@@ -28,14 +30,13 @@ function Zdjecia() {
     { src: "/Images/3org.jpg" },
     { src: "/Images/5org.jpg" },
     { src: "/Images/6org.jpg", vertical: true },
-    { src: "/Images/8org.jpg" }
+    { src: "/Images/8org.jpg" },
   ];
 
   return (
     <AnimatedSectionPhotos>
       <div className="container mt-5 text-white gallery-container">
         <h1 className="mb-4">GALERIA</h1>
-
         <motion.div
           className="gallery-grid"
           variants={containerVariants}
@@ -49,11 +50,7 @@ function Zdjecia() {
               variants={photoVariants}
               onClick={() => setActiveImage(photo.src)}
             >
-              <img 
-                src={photo.src} 
-                alt={photo.src.split("/").pop()} 
-                loading="lazy" 
-              />
+              <img src={photo.src} alt={photo.src.split("/").pop()} loading="lazy" />
             </motion.div>
           ))}
         </motion.div>
