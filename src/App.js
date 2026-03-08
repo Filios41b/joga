@@ -34,10 +34,10 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <SEO />
         <div className="page-container">
           <Navbar />
           <main className="content">
-            <SEO />
             <AnimatedRoutes />
           </main>
           <BackToTop />

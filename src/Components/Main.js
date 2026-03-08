@@ -1,4 +1,3 @@
-// ./Components/Main.js
 import React from 'react';
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
@@ -6,9 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const listVariants = {
   hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.15 }
-  }
+  visible: { transition: { staggerChildren: 0.15 } }
 };
 
 const listItemVariants = {
@@ -30,7 +27,7 @@ function Main() {
         <h1 className='joga text-center mb-4'>JOGA FUNKCJONALNA</h1>
 
         <p className='yoga-page lead-page'>
-          Zajęcia łączące elementy treningu funkcjonalnego, pilatesu oraz łagodnej jogi, dzięki czemu są odpowiednie zarówno dla osób aktywnych, jak i wracających do ruchu po przerwie. To spokojny trening, który buduje siłę od środka, poprawia mobilność i wspiera regenerację.
+          Zajęcia łączące elementy treningu funkcjonalnego, pilatesu i łagodnej jogi, dzięki czemu są odpowiednie zarówno dla osób aktywnych, jak i wracających do ruchu po przerwie. To spokojny trening, który buduje siłę od środka, poprawia mobilność i wspiera regenerację.
         </p>
 
         <p className='yoga-page-lead mt-4'>
@@ -43,11 +40,11 @@ function Main() {
           animate="visible"
           variants={listVariants}
         >
-          <h3 className='training-title-page'>Podczas treningu:</h3>
+          <h2 className='training-title-page'>Podczas treningu:</h2>
           <motion.ul className='training-list-page'>
             {benefits.map((item, index) => (
               <motion.li key={index} variants={listItemVariants}>
-                {item}
+                <h3>{item}</h3>
               </motion.li>
             ))}
           </motion.ul>

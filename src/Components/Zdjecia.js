@@ -6,9 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: {
-      staggerChildren: 0.1
-    }
+    transition: { staggerChildren: 0.1 }
   }
 };
 
@@ -19,6 +17,21 @@ const photoVariants = {
 
 function Zdjecia() {
   const [activeImage, setActiveImage] = useState(null);
+
+  const photos = [
+    { src: "/Images/12org.jpg", vertical: true },
+    { src: "/Images/4org.jpg" },
+    { src: "/Images/9org.jpg" },
+    { src: "/Images/11org.jpg", vertical: true },
+    { src: "/Images/1org.jpg" },
+    { src: "/Images/7org.jpg", vertical: true },
+    { src: "/Images/10org.jpg" },
+    { src: "/Images/13org.jpg", vertical: true },
+    { src: "/Images/3org.jpg" },
+    { src: "/Images/5org.jpg" },
+    { src: "/Images/6org.jpg", vertical: true },
+    { src: "/Images/8org.jpg" },
+  ];
 
   return (
     <AnimatedSectionPhotos>
@@ -31,27 +44,17 @@ function Zdjecia() {
           initial="hidden"
           animate="visible"
         >
-          {[
-            { src: "/Images/12org.jpg", vertical: true },
-            { src: "/Images/4org.jpg" },
-            { src: "/Images/9org.jpg" },
-            { src: "/Images/11org.jpg", vertical: true },
-            { src: "/Images/1org.jpg" },
-            { src: "/Images/7org.jpg", vertical: true },
-            { src: "/Images/10org.jpg" },
-            { src: "/Images/13org.jpg", vertical: true },
-            { src: "/Images/3org.jpg" },
-            { src: "/Images/5org.jpg" },
-            { src: "/Images/6org.jpg", vertical: true },
-            { src: "/Images/8org.jpg" },
-          ].map((photo, index) => (
+          {photos.map((photo, index) => (
             <motion.div
               key={index}
               className={`photo ${photo.vertical ? "vertical" : ""}`}
               variants={photoVariants}
               onClick={() => setActiveImage(photo.src)}
             >
-              <img src={photo.src} alt={photo.src.split("/").pop()} />
+              <img
+                src={photo.src}
+                alt={`Joga Funkcjonalna - ${photo.src.split("/").pop().split(".")[0]}`}
+              />
             </motion.div>
           ))}
         </motion.div>

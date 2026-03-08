@@ -3,17 +3,20 @@ import { Helmet } from "react-helmet-async";
 
 const SEO = () => {
   const title = "Joga Funkcjonalna";
-  const description = `Zajęcia łączące elementy treningu funkcjonalnego, pilatesu oraz łagodnej jogi, dzięki czemu są odpowiednie zarówno dla osób aktywnych, jak i wracających do ruchu po przerwie.`;
+  const description = `Zajęcia łączące elementy treningu funkcjonalnego, pilatesu i łagodnej jogi, odpowiednie dla aktywnych i wracających do ruchu po przerwie.`;
+
   const url = "https://jogafunkcjonalna.pl";
   const image = `${url}/icons/logo512.png`;
 
   return (
     <Helmet>
+      {/* Title & Description */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
 
+      {/* Author */}
       <meta name="author" content="Joga Funkcjonalna" />
 
       {/* Open Graph */}
